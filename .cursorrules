@@ -1,0 +1,86 @@
+# Portfolio Landing Workspace Cursor Rules
+
+## Scope
+- These rules apply to the entire Portfolio workspace (`/Users/chriswilson/Desktop/Business/Portfolio`). Add directory-specific overrides only when truly required.
+
+## Product & Integrations Context
+- Domain: Premium portfolio landing page + admin productivity dashboard showcasing multiple apps.
+- Frontend stack: Next.js 14 App Router, TypeScript, Tailwind (style tokens defined in `tailwind.config.js` + `style-brief.json`).
+- Data today: local placeholder JSON in `src/data/`. Upcoming: auto-ingest latest Vercel deployments + real business KPIs.
+- Source of truth docs: `docs/portfolio-landing-prd.md` (requirements) and `style-brief.json` (visual system).
+
+## Defaults for AI Actions
+- Prefer absolute paths in tool calls and when referencing files in responses.
+- Preserve existing formatting, spacing, and component structure; avoid formatting-only diffs.
+- Keep edits surgical and scoped to the task. No refactors or dependency upgrades unless requested.
+- Use clear, descriptive names; avoid 1–2 letter variables.
+- Favor TypeScript strictness. No `any` unless absolutely unavoidable with explanation.
+- Return early to limit nesting; keep components focused and composable.
+- Write explanations succinctly; highlight what changed and why without fluff.
+
+## Security & Compliance
+- Never hardcode secrets or API tokens. Use environment variables (`.env.local`) for upcoming Vercel / analytics keys.
+- Admin dashboard routes must remain gated once auth is introduced; never expose sensitive metrics client-side without safeguards.
+- When mocking data, label it clearly so real credentials aren't mistaken for fixtures.
+
+## Operational Conventions
+- Frontend location: `frontend/`. Use feature folders under `src/components/` or `src/data/` per PRD (projects, dashboard, layout, etc.).
+- Placeholder data lives in `src/data/*.ts`. Keep schemas aligned with future API responses to simplify the switch to live data.
+- Images / media placeholders go in `public/mock/` with descriptive filenames.
+- When adding build steps or scripts, document them in `frontend/README.md` (create if missing).
+- Use `npm run lint` before handing off work; mention the result in updates.
+
+## UI / UX Expectations
+- Follow `style-brief.json` tokens (midnight palette, glowing gradients, stylized portraits). Maintain AA contrast.
+- 8pt spacing system, rounded cards, premium glassmorphism overlays. Ensure hover/focus parity for keyboard users.
+- Mock phone viewer should always have a graceful fallback state when assets are missing.
+- Keep copy concise, action-led, and consistent with PRD tone.
+
+## Data & API
+- Defer to `docs/portfolio-landing-prd.md` for field requirements (project cards, KPIs, productivity score).
+- When preparing for integrations (Vercel deployments, metrics APIs), stub TypeScript interfaces first and isolate fetch logic.
+- Future API secrets belong in environment config; document any expected variables in `docs/setup` (create folder if absent).
+
+## Status Tracking & Documentation
+- Maintain `docs/Status.md` as the live task board:
+  - Move items between Pending / In Progress / Completed as work evolves.
+  - Update the `lastUpdated` value every time you edit the status file.
+- Any feature-level change (new component, API, UX behavior) must be reflected in `docs/portfolio-landing-prd.md` before handoff so requirements stay accurate.
+
+## Git & Changes
+- Keep commits focused (e.g., `projects: add mock phone viewer`). Avoid mixing unrelated changes.
+- Do not remove user-created files or restructure without explicit approval.
+
+## Additional Rules
+
+rule_type: always
+
+---
+
+Never use phrases like "Certainly!", "Of course!", or "Great question!". Respond directly without apologies or excessive politeness.
+
+rule_type: always
+
+---
+
+Never hardcode secrets, credentials, or API keys in code. Use environment variables or secure config instead.
+
+rule_type: always
+
+---
+
+Prioritize React/Next.js + TypeScript for frontend work and keep explanations concise.
+
+rule_type: always
+
+---
+
+When editing code or docs, make minimal, surgical changes scoped to the feature or section at hand.
+
+rule_type: always
+
+---
+
+Always update `docs/Status.md` when task states change and refresh `docs/portfolio-landing-prd.md` whenever feature scope shifts, so documentation stays synchronized with the implementation.
+
+

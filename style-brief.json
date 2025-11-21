@@ -1,0 +1,210 @@
+{
+  "metadata": {
+    "title": "Premium Portfolio Landing + Admin Dashboard Style",
+    "description": "JSON design brief describing the premium, dark-mode aesthetic showcased in the supplied reference for use across a multi-app portfolio landing page plus productivity dashboard.",
+    "inspirationSummary": "Deep navy surfaces, floating cards with soft gradients, vibrant progress rings, and friendly stylized portraits anchored by crisp geometric typography.",
+    "intendedUse": "Seed AI-generated concepts and enforce consistency across hero landing modules, project gallery, mock phone previews, and admin analytics dashboard."
+  },
+  "brandPersonality": {
+    "toneDescriptors": [
+      "premium",
+      "future-ready",
+      "playfully professional",
+      "trustworthy",
+      "data-fluent"
+    ],
+    "voiceGuidance": "Headlines celebrate progress and achievement. Microcopy is concise, upbeat, and confident without sounding boastful."
+  },
+  "colorPalette": {
+    "backgrounds": [
+      {
+        "name": "Midnight Core",
+        "hex": "#071B3A",
+        "usage": "Global page background, dashboard canvas."
+      },
+      {
+        "name": "Abyss Layer",
+        "hex": "#0F254C",
+        "usage": "Card containers, footer panels, phone mock frame."
+      }
+    ],
+    "surfaceAccents": [
+      {
+        "name": "Deep Slate",
+        "hex": "#162D5C",
+        "usage": "Secondary cards, tab bars, dividers."
+      },
+      {
+        "name": "Frosted Indigo",
+        "hex": "#1F3770",
+        "usage": "Hover states, floating widget layers with 70% opacity blur."
+      }
+    ],
+    "highlights": [
+      {
+        "name": "Aurora Teal",
+        "hex": "#40C8F4",
+        "usage": "Primary CTAs, progress arcs, focus states."
+      },
+      {
+        "name": "Signal Turquoise",
+        "hex": "#51E6C2",
+        "usage": "Positive deltas, pill labels, subtle glow edges."
+      },
+      {
+        "name": "Citrine Pop",
+        "hex": "#F4B740",
+        "usage": "Profile tags, badge fills, accent buttons."
+      }
+    ],
+    "typographyColors": {
+      "primaryText": "#EDF1FF",
+      "secondaryText": "#9BB2E1",
+      "mutedText": "#5C6A92",
+      "positiveValue": "#63FF9D",
+      "negativeValue": "#FF6E6E"
+    },
+    "gradientPatterns": [
+      {
+        "name": "Orbit Pulse",
+        "stops": [
+          { "hex": "#00C6FF", "position": 0 },
+          { "hex": "#0068FF", "position": 65 },
+          { "hex": "#6F00FF", "position": 100 }
+        ],
+        "usage": "Radial progress rings, CTA hover glow."
+      },
+      {
+        "name": "Sunlit Ember",
+        "stops": [
+          { "hex": "#FFCC5C", "position": 0 },
+          { "hex": "#FF8C42", "position": 75 }
+        ],
+        "usage": "Premium badges, avatar halos."
+      }
+    ]
+  },
+  "typography": {
+    "primaryFont": {
+      "family": "Poppins",
+      "weights": ["500", "600", "700"],
+      "usage": "Headlines, hero statements, large numbers."
+    },
+    "secondaryFont": {
+      "family": "Inter",
+      "weights": ["400", "500"],
+      "usage": "Body copy, navigation, metric labels."
+    },
+    "numeralStyle": "Tabular figures enabled for KPI readability.",
+    "letterSpacing": {
+      "headline": "-1%",
+      "body": "0%",
+      "eyebrow": "8% uppercase tracking"
+    },
+    "microcopyTreatment": "All-caps pill labels with 80% opacity text, 2px letter-spacing."
+  },
+  "components": {
+    "heroPanel": {
+      "structure": "Two-column layout with hero copy and CTA stacked left, mock phone browser floating right with layered cards behind.",
+      "background": "Midnight Core gradient with faint diagonal noise.",
+      "ctaStyle": "Full-width pill, Aurora Teal gradient, 8px inner glow, soft outer shadow rgba(64,200,244,0.35)."
+    },
+    "projectCard": {
+      "shape": "12px radius, elevated 16px drop shadow blur 40px.",
+      "content": ["app avatar circle", "title", "one-line value prop", "link chips for PRD + live demo"],
+      "states": {
+        "default": "Deep Slate surface, thin 1px inner border #203368.",
+        "hover": "Lift 4px, apply Frosted Indigo overlay, glow using Aurora Teal."
+      }
+    },
+    "mockPhoneViewer": {
+      "frame": "Tall rounded rectangle, 3px border #14294F, notch indicator.",
+      "interaction": "Swipeable carousel of screen images, each screen tinted to match project accent color.",
+      "reflection": "Subtle bottom fade to simulate glossy glass."
+    },
+    "navTabs": {
+      "style": "Segmented control with pill indicator. Labels in Inter 500, 14px.",
+      "tabs": ["Projects", "Dashboard"],
+      "indicator": "Gradient fill from Aurora Teal to Signal Turquoise, drop shadow 0 6 16 rgba(0,0,0,0.35)."
+    },
+    "dashboardMetricCard": {
+      "content": ["title", "value", "delta chip", "inline sparkline"],
+      "visual": "Semi-circle progress ring or segmented bar using gradient thresholds."
+    },
+    "radialProgressWidget": {
+      "segments": 12 radial bars with alternating Aurora Teal and Citrine Pop tips.",
+      "centerLabel": "Large numeral (40px) with descriptor below (12px).",
+      "animation": "Clockwise sweep with elastic ease on load."
+    },
+    "dataTiles": {
+      "kpis": ["total users", "MRR", "aggregate productivity score"],
+      "format": "Stacked cards with icon chip, bold stat, mini spark bars."
+    },
+    "ctaButton": {
+      "shape": "Full pill, 24px height minimum, 20px horizontal padding.",
+      "iconography": "Rounded arrow icon, line weight 2px, white."
+    }
+  },
+  "imagery": {
+    "characterStyle": "Stylized premium portraits with exaggerated facial features and warm lighting. Use subtle rim light to pop from navy background.",
+    "appMockups": "Isometric or straight-on device renders with matching accent gradients. Apply soft depth-of-field to background layers.",
+    "badges": "Rounded capsules with embossed edges and inner gradient glow."
+  },
+  "layout": {
+    "grid": "1200px content width centered, 12-column grid, 24px gutter.",
+    "spacingScale": [8, 12, 16, 24, 32, 48, 72],
+    "cardAlignment": "Staggered layering with occasional overlap to suggest depth.",
+    "sectionFlow": [
+      "Hero + CTA",
+      "Featured project slider",
+      "Projects grid with PRD links",
+      "Dashboard teaser with KPIs",
+      "Footer with contact + social proof"
+    ]
+  },
+  "interactions": {
+    "microInteractions": [
+      "Cards float upward 4px with 200ms ease-out on hover.",
+      "Progress rings animate sweep + glow when values update.",
+      "Mock phone auto-scrolls through screens unless user hovers to pause."
+    ],
+    "feedback": {
+      "success": "Apply Signal Turquoise glow and tick icon.",
+      "warning": "Use Citrine Pop background at 30% opacity, text stays white."
+    }
+  },
+  "motion": {
+    "principles": ["smooth", "anticipation", "physics-lite"],
+    "timings": {
+      "fast": "150ms ease-out for hover",
+      "standard": "350ms cubic-bezier(0.25, 0.1, 0.25, 1)",
+      "emphasis": "600ms spring for hero entry"
+    },
+    "parallax": "Background constellations drift at 10% scroll speed; foreground cards move at 40%."
+  },
+  "dataVisualization": {
+    "style": "Rounded bars, segmented arcs, dot matrices with glow tips.",
+    "axes": "Minimal ticks, use thin 1px lines #1E335E.",
+    "tooltips": "Glassmorphism panel (rgba(7,27,58,0.85)) with 1px border #3A4F7E."
+  },
+  "accessibility": {
+    "contrast": "Maintain WCAG 2.1 AA for all text > 14px. Use lighter text tokens (#EDF1FF) on navy surfaces.",
+    "focusStates": "2px outer ring using Aurora Teal plus 1px inner ring #FFFFFF at 60% opacity.",
+    "motionSensitivity": "Respect reduced-motion by disabling parallax and using opacity fades."
+  },
+  "dosAndDonts": {
+    "do": [
+      "Layer cards with consistent depth and soft glows.",
+      "Keep typography weights bold for stats and medium for labels.",
+      "Pair vivid accents against rich navy to emphasize key actions.",
+      "Use stylized illustrated portraits or premium renders to humanize each app."
+    ],
+    "dont": [
+      "Introduce flat white backgrounds or harsh black.",
+      "Use thin serif fonts or handwritten styles.",
+      "Overcrowd metrics—limit to three KPIs per row.",
+      "Apply sharp drop shadows; always soften with 35px+ blur."
+    ]
+  }
+}
+
