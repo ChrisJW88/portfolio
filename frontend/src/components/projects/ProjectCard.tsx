@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import type { Project } from "@/data/projects";
 import { trackEvent } from "@/lib/analytics";
 
@@ -53,21 +52,23 @@ export function ProjectCard({ project, isActive, onSelect }: Props) {
         ))}
       </div>
       <div className="mt-5 flex flex-wrap gap-3 text-sm font-medium">
-        <Link
+        <a
           href={project.prdUrl}
           target="_blank"
+          rel="noopener noreferrer"
           onClick={() => trackEvent({ type: "project_prd_click", projectSlug: project.slug, projectTitle: project.title })}
           className="rounded-full border border-white/20 px-4 py-2 text-textSecondary hover:text-white"
         >
           View PRD
-        </Link>
-        <Link
+        </a>
+        <a
           href={project.liveUrl}
           target="_blank"
+          rel="noopener noreferrer"
           className="rounded-full bg-gradient-to-r from-aurora to-signal px-4 py-2 text-midnight shadow-glow"
         >
           Launch latest
-        </Link>
+        </a>
       </div>
       <p className="mt-3 text-xs text-textMuted">
         {deploymentTimestamp ? `Synced via Vercel · ${deploymentTimestamp}` : "Using fallback preview until deploys run."}

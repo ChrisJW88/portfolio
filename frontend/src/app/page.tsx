@@ -3,6 +3,8 @@ import { Footer } from "@/components/layout/Footer";
 import { ProjectsExperience } from "@/components/projects/ProjectsExperience";
 import { getProjects } from "@/data/projects";
 
+export const dynamic = 'force-dynamic';
+
 export default async function ProjectsPage() {
   try {
     const projects = await getProjects();
