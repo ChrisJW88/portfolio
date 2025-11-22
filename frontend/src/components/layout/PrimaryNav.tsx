@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 const links = [
   { href: "/", label: "Projects" },
   { href: "/dashboard", label: "Dashboard" }
-];
+] as const;
 
 export function PrimaryNav() {
   const pathname = usePathname();
