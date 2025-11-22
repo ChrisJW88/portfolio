@@ -2,6 +2,7 @@
 
 import type { Project } from "@/data/projects";
 import { trackEvent } from "@/lib/analytics";
+import { LaunchButton } from "./LaunchButton";
 
 type Props = {
   project: Project;
@@ -61,14 +62,7 @@ export function ProjectCard({ project, isActive, onSelect }: Props) {
         >
           View PRD
         </a>
-        <a
-          href={project.liveUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="rounded-full bg-gradient-to-r from-aurora to-signal px-4 py-2 text-midnight shadow-glow"
-        >
-          Launch latest
-        </a>
+        <LaunchButton url={project.liveUrl} hasDeployment={!!project.deployment} />
       </div>
       <p className="mt-3 text-xs text-textMuted">
         {deploymentTimestamp ? `Synced via Vercel · ${deploymentTimestamp}` : "Using fallback preview until deploys run."}

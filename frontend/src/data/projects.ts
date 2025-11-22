@@ -38,7 +38,7 @@ const marketingProjects: MarketingProject[] = [
     slug: "fairway-practice",
     snippet: "Offline-first golf practice tracker with per-shot scoring and progress visualization.",
     tags: ["Golf", "Mobile", "Offline"],
-    prdUrl: "https://github.com/chriswilson/fairway-practice/blob/main/documentation/GolfPracticeTracker_PRD.md",
+    prdUrl: "/prds/fairway-practice",
     accentColor: "#C0C0C0",
     mockScreens: ["/mock/fairway-practice-1.png", "/mock/fairway-practice-2.png"],
     metric: {
@@ -53,7 +53,7 @@ const marketingProjects: MarketingProject[] = [
     slug: "fairway-booking",
     snippet: "Automated golf group booking that finds mutual free time and books at favorite clubs.",
     tags: ["Golf", "Automation", "B2C"],
-    prdUrl: "https://github.com/chriswilson/teeup/blob/main/documentation/FairwayBooking_PRD.md",
+    prdUrl: "/prds/fairway-booking",
     accentColor: "#22C55E",
     mockScreens: ["/mock/fairway-booking-1.png", "/mock/fairway-booking-2.png"],
     metric: {
@@ -68,7 +68,7 @@ const marketingProjects: MarketingProject[] = [
     slug: "mindful-moment",
     snippet: "Personal growth app blending AI-guided meditations with reflective journaling for goal progress.",
     tags: ["Wellness", "AI", "Mobile"],
-    prdUrl: "https://github.com/chriswilson/mindful-moment",
+    prdUrl: "/prds/mindful-moment",
     accentColor: "#E07A5F",
     mockScreens: ["/mock/mindful-moment-1.png", "/mock/mindful-moment-2.png"],
     metric: {
